@@ -1,0 +1,401 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: azure;
+}
+.fondonegro {
+  background-color: black;
+}
+.fondo {
+  background-color: azure;
+}
+.fondo h2 {
+  padding: 250px 0;
+}
+h1 {
+  text-align: center;
+  color: #f76e11;
+  margin-top: 15px;
+  padding: 0px 20px;
+  font-size: 50px;
+  border-radius: 10px;
+  font-family: "oswaldo";
+  font-family: "Brush Script MT";
+  text-shadow: 2px 2px 4px black;
+}
+h1 span {
+  color: black;
+  text-shadow: 2px 2px 2px #f76e11;
+}
+h2 {
+  width: 100%;
+  text-align: center;
+  color: #f76e11;
+  font-size: 50px;
+  padding: 10px;
+  font-family: "Brush Script MT";
+  text-shadow: 2px 2px 2px black;
+}
+h3 {
+  text-align: center;
+  color: #f76e11;
+  font-size: 35px;
+  font-family: "Brush Script MT";
+  text-shadow: 2px 2px 2px black;
+  padding: 10px;
+}
+h4{
+  font-family: "oswald";
+}
+.container {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  grid-template-rows: auto auto 1000px auto 1fr auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "hero hero"
+    "destacados popular"
+    "opciones opciones"
+    "footer footer";
+  width: 100%;
+}
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu li {
+  list-style: none;
+  margin: 0px 3px;
+  font-size: 20px;
+}
+a {
+  text-decoration: none;
+  text-align: center;
+}
+.menu li a {
+  color: black;
+  background-color: azure;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 7px;
+  text-shadow: 0px 0px 1px black;
+}
+.menu li a:hover {
+  background-color: #92a9bd;
+}
+.header {
+  grid-area: header;
+  background-color: #fbf8f1;
+}
+nav {
+  grid-area: nav;
+  padding: 10px;
+  border-bottom: 1px solid black;
+  border-radius: 10px;
+  background-color: #f76e11;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+}
+.contenedorHeader {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.hero {
+  grid-area: hero;
+  background-image: url("https://images.unsplash.com/photo-1604971263525-1a9714a02d87?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero h4,
+.hero p {
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  font-family: "oswald";
+}
+.hero p {
+  font-size: 30px;
+}
+.elemento {
+  background-color: white;
+  box-shadow: 2px 2px 3px black;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0px;
+}
+.destacados {
+  grid-area: destacados;
+  background-color: #fbf8f1;
+  border: 3px solid black;
+  box-shadow: 2px 2px 3px black;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 3px 5px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+.destacados .elemento {
+  display: flex;
+}
+.destacados .elemento section img {
+  width: 250px;
+}
+.parrafoelemento {
+  text-align: justify;
+  padding: 0px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: black;
+}
+section p a {
+  color: black;
+  text-align: center;
+  text-decoration: underline;
+}
+.popular {
+  grid-area: popular;
+  background-color: #fbf8f1;
+  border: 3px solid black;
+  box-shadow: 2px 2px 3px black;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 3px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  overflow: auto;
+}
+.popular .elemento section img {
+  width: 100%;
+}
+
+.opciones {
+  grid-area: opciones;
+  width: 99.5%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #fbf8f1;
+  border: 3px solid black;
+  box-shadow: 2px 2px 3px black;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+.opciones .elemento {
+  width: 300px;
+  margin: 10px;
+  border: 1px solid black;
+}
+.opciones .elemento section img {
+  text-align: center;
+  width: 250px;
+}
+
+.footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fbf8f1;
+  border: 3px solid black;
+  box-shadow: 2px 2px 3px black;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 3px 5px;
+  text-align: center;
+}
+
+.containerC {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1.5fr;
+  grid-template-rows: auto auto auto auto;
+  grid-auto-columns: 1fr;
+  gap: 3px 3px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "heroc heroc heroc heroc"
+    "autos autos autos preferidos"
+    "motos motos motos preferidos";
+}
+.heroc {
+  grid-area: heroc;
+  background-image: url("https://images.unsplash.com/photo-1552273591-61ce0e5d04cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-position: center;
+  background-size: cover;
+  font-size: 40px;
+  color: white;
+}
+.heroc h4{
+  padding-bottom: 80px;
+}
+
+.autos, .motos, .preferidos{
+  grid-area: autos;
+  width: 99.5%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: space-around;
+  flex-wrap: wrap;
+  background-color: #fbf8f1;
+  border: 3px solid black;
+  box-shadow: 2px 2px 3px black;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+.autos .elemento, .motos .elemento, .preferidos .elemento {
+  width: 300px;
+  margin: 10px;
+  border: 1px solid black;
+}
+.autos .elemento section img, .preferidos .elemento section img  {
+  text-align: center;
+  width: 250px;
+}
+
+.motos{
+  grid-area: motos;
+}
+.motos .elemento section img{
+  width: 200px;
+}
+
+.preferidos {
+  grid-area: preferidos;
+  overflow: auto;
+  height: 100%;
+}
+
+@media only screen and (max-width: 778px) {
+  nav {
+    position: static;
+    padding: 3px;
+    border-radius: 0px;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu li {
+    margin: 2px auto;
+    background-color: aqua;
+    width: 100%;
+    border: 1px solid black;
+    text-align: center;
+    color: black;
+    background-color: azure;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 7px;
+    text-shadow: 0px 0px 1px black;
+  }
+  .menu li a {
+    width: 100%;
+    padding: 0 auto;
+    border: none;
+    padding: 0px;
+    border-radius: none;
+    text-shadow: none;
+  }
+  .destacados .elemento {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    grid-template-rows: auto auto 1000px auto auto 1fr auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header"
+      "nav nav"
+      "hero hero"
+      "destacados destacados"
+      "popular popular"
+      "opciones opciones"
+      "footer footer";
+    width: 100%;
+  }
+  .contenedorIng {
+    flex-direction: column;
+  }
+  .containerC {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "heroc heroc heroc"
+      "autos autos autos"
+      "motos motos motos"
+      "camionetas camionetas camionetas"
+      "preferidos preferidos preferidos";
+  }
+  .preferidos{
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 565px) {
+  .footer {
+    flex-direction: column;
+  }
+  .footerContacto {
+    padding-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 331px) and (max-width: 480px) {
+  .contenedorHeader {
+    flex-wrap: wrap;
+  }
+  section .menu {
+    width: 100%;
+  }
+  .footer {
+    overflow: auto;
+  }
+
+}
+@media only screen and (max-width: 330px) {
+  .opciones .elemento {
+    width: 100%;
+  }
+  .opciones .elemento section img {
+    width: 100%;
+  }
+  h1 {
+    font-size: 100%;
+  }
+ 
+}
