@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: azure;
+  background-color: tomato;
 }
 .fondonegro {
   background-color: black;
@@ -87,9 +87,11 @@ a {
   padding: 5px;
   border-radius: 7px;
   text-shadow: 0px 0px 1px black;
+  transition: all 0.5s;
 }
 .menu li a:hover {
-  background-color: #92a9bd;
+  background-image: linear-gradient(120deg, tomato 60%, black);
+  color: white;
 }
 .header {
   grid-area: header;
@@ -155,6 +157,10 @@ nav {
 }
 .destacados .elemento section img {
   width: 250px;
+  transition: all 1s;
+}
+.destacados .elemento section img:hover {
+  transform: scale(1.1);
 }
 .parrafoelemento {
   text-align: justify;
@@ -179,13 +185,15 @@ section p a {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-
   overflow: auto;
 }
 .popular .elemento section img {
   width: 100%;
+  transition: all 1s;
 }
-
+.popular .elemento section img:hover {
+  transform: scale(1.05);
+}
 .opciones {
   grid-area: opciones;
   width: 99.5%;
@@ -205,6 +213,11 @@ section p a {
   width: 300px;
   margin: 10px;
   border: 1px solid black;
+  transition: all 1s;
+}
+.opciones .elemento:hover {
+  transform: scale(1.1);
+  
 }
 .opciones .elemento section img {
   text-align: center;
@@ -225,6 +238,8 @@ section p a {
   text-align: center;
 }
 
+/* CONSULTAS----------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
 .containerC {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1.5fr;
@@ -235,7 +250,8 @@ section p a {
   grid-template-areas:
     "heroc heroc heroc heroc"
     "autos autos autos preferidos"
-    "motos motos motos preferidos";
+    "motos motos motos preferidos"
+    "camionetas camionetas camionetas preferidos";
 }
 .heroc {
   grid-area: heroc;
@@ -253,7 +269,7 @@ section p a {
   padding-bottom: 80px;
 }
 
-.autos, .motos, .preferidos{
+.autos, .motos, .camionetas, .preferidos{
   grid-area: autos;
   width: 99.5%;
   margin: auto;
@@ -268,22 +284,39 @@ section p a {
   border-radius: 10px;
   padding: 10px;
   text-align: center;
+  
 }
-.autos .elemento, .motos .elemento, .preferidos .elemento {
+.autos .elemento, .motos .elemento, .camionetas .elemento, 
+  .preferidos .elemento {
   width: 300px;
   margin: 10px;
   border: 1px solid black;
 }
-.autos .elemento section img, .preferidos .elemento section img  {
+.autos .elemento section img, .camionetas .elemento section img,  .preferidos .elemento section img  {
   text-align: center;
   width: 250px;
+  transition: all 1s;
+}
+
+.autos .elemento section img:hover, .camionetas .elemento section img:hover,  .preferidos .elemento section img:hover{
+  transform: scale(1.05);
 }
 
 .motos{
   grid-area: motos;
+  
 }
 .motos .elemento section img{
   width: 200px;
+  transition: 0.5s linear;
+  
+}
+.motos .elemento section img:hover{
+  transform: rotateY(180deg);
+}
+
+.camionetas {
+  grid-area: camionetas;
 }
 
 .preferidos {
@@ -291,6 +324,211 @@ section p a {
   overflow: auto;
   height: 100%;
 }
+
+/* Sobre Nosotros -------------------------------------------------*/
+
+.contenedorNosotros {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fondoNosotros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://images.unsplash.com/photo-1484950763426-56b5bf172dbb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  width: 100%;
+  height: 800px;
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  font-family: "oswald";
+}
+
+.elementoSN {
+  background-color: azure;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 99.5%;
+  margin: 10px auto;
+  padding: 20px;
+  box-shadow: 2px 2px 3px black;
+  font-size: 20px;
+}
+.elementoSN h2 {
+  padding: 0px;
+}
+.listasSN {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.listaSN {
+  width: 700px;
+}
+.lista {
+  list-style: none;
+}
+.lista h3 {
+  margin-bottom: 20px;
+}
+.tituloSN {
+  margin-bottom: 20px;
+}
+
+@keyframes enProceso{
+  0%{
+    color: black;
+    text-shadow: 3px 3px 5px tomato;
+  }
+  50%{
+    color: #f76e11;
+  }
+  100%{
+    color: white;
+  }
+}
+/* Trabaja con nosotros---------------------------------------------------------------------------------------------------------------------------------------- */
+
+.contenedorTN{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.heroTN{
+  background-image: url("https://images.unsplash.com/photo-1505235672157-c152c125e575?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+}
+.heroTN h4{
+  font-size: 40px;
+  color: white;
+}
+.heroTN .renta{
+  font-size: 80px;
+  text-transform: capitalize;
+}
+.contenedorformTN{
+
+  padding: 30px;
+  max-width: 800px;
+  background-color: #fbf8f1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 3px solid #f76e11;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px black;
+  text-align: center;
+}
+.elementoform{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.elementoform input{
+  background-color: #fbf8f1;
+  border: none;
+  border-bottom: 2px solid black;
+
+  color: black;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+/* INGRESAR ---------------------------------------------------------*/
+.contenedorIng {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.elementoIng {
+  width: 100%;
+  height: 700px;
+}
+.imagenIng1 {
+  background-image: url("https://wallpaperbat.com/img/203109-hd-wallpaper-vehicle-taillight-wallpaper-background-audi-black.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.formularioIng {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+.ing {
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 20px 100px;
+  font-family: "oswald";
+}
+.ing h4 {
+  margin: 30px;
+}
+label {
+  font-size: 20px;
+  margin: 10px;
+}
+input {
+  background-color: black;
+  border: none;
+  border-bottom: 1px solid white;
+  font-size: 20px;
+  color: white;
+}
+button {
+  padding: 0px 15px;
+  margin: 10px;
+}
+
+
+
+.enProceso{
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  animation-name: enProceso;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+
+
+ @keyframes enProceso{
+  0%{
+    color: black;
+    text-shadow: 3px 3px 5px tomato;
+  }
+  50%{
+    color: #f76e11;
+    text-shadow: 3px 3px 5px white;
+  }
+  100%{
+    color: white;
+  }
+ }
+/* -----------------------------------------Media Query--------------------------------------- */
+/* -----------------------------------------Media Query--------------------------------------- */
 
 @media only screen and (max-width: 778px) {
   nav {
@@ -385,7 +623,15 @@ section p a {
   .footer {
     overflow: auto;
   }
-
+  .tituloSN {
+    width: 100%;
+  }
+  .tituloSN {
+    font-size: 35px;
+  }
+  .ing {
+    padding: 20px 10px;
+  }
 }
 @media only screen and (max-width: 330px) {
   .opciones .elemento {
@@ -397,5 +643,7 @@ section p a {
   h1 {
     font-size: 100%;
   }
- 
+  .ing {
+    padding: 20px 0px;
+  }
 }
